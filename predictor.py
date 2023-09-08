@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow.keras.layers import StringLookup
 import numpy as np
 from tensorflow import keras
+import os
 
 #required to get the vocabulary
 text_files = open('char/characters.txt', 'r').readlines()
@@ -98,3 +99,4 @@ filename = 'output/prediction.txt'
 with open(filename, 'w') as f:
     f.write(decoded[0])
 
+os.remove(img_path)
