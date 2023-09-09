@@ -86,25 +86,25 @@ def decode_predictions(pred):
     return output_text
 
 
-# loading the image
-img_path = "/Users/amogh/Downloads/test2.jpeg"
-test_img = preprocess_image(img_path)
-test_img = tf.reshape(test_img, (1, 128, 32, 1))
+# # loading the image
+# img_path = "/Users/amogh/Downloads/test2.jpeg"
+# test_img = preprocess_image(img_path)
+# test_img = tf.reshape(test_img, (1, 128, 32, 1))
 
-# loading the model
-model = tf.keras.models.load_model("model.h5")
+# # loading the model
+# model = tf.keras.models.load_model("model.h5")
 
-# making the prediction
-prediction = model.predict(test_img)
+# # making the prediction
+# prediction = model.predict(test_img)
 
-# decoding the prediction
-decoded = decode_predictions(prediction)
+# # decoding the prediction
+# decoded = decode_predictions(prediction)
 
-# specifying the path to store the prediction
-filename = "output/prediction.txt"
+# # specifying the path to store the prediction
+# filename = "output/prediction.txt"
 
-# writing the prediction into a .txt file
-with open(filename, "w") as f:
-    f.write(decoded[0])
+# # writing the prediction into a .txt file
+# with open(filename, "w") as f:
+#     f.write(decoded[0])
 
-os.remove(img_path)
+# os.remove(img_path)
